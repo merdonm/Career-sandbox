@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  cursor:none;
+  scroll-behavior: smooth;
+}
+/* .runningSlide {
+  animation: transformX 15s ease-in infinite forwards;
+
+}
+@keyframes transformX {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  95% {
+    transform: translateX(-95%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+.borderr {
+  border: 1px solid red;
+}
+.animation-arrow-button {
+  animation: changeOpacity 300ms linear forwards;
+}
+@keyframes changeOpacity {
+  from {
+    opacity: 0%;
+    margin-left: 0px;
+  }
+  to {
+    opacity: 100%;
+    margin-left: 7.5%;
+   
+  }
+}
+.animation-arrow-buttonHide {
+  animation: changeOpacityHide 300ms linear forwards;
+  display: hidden;
+}
+@keyframes changeOpacityHide {
+  from {
+    margin-left: 7.5%;
+  }
+  to {
+    margin-left: 0;
+    opacity: 0;
+  }
+}
+
+.scaleIn {
+  animation: transformScaleIn 700ms linear forwards;
+  transform-origin: top left;
+  
+}
+@keyframes transformScaleIn {
+  from {
+    transform: scaleX(0px) scaleY(0px);
+  }
+  to {
+    transform: scaleX(1.085) scaleY(1.05);
+  }
+}
+.scaleOut {
+  animation: transformScaleOut 700ms linear forwards;
+  transform-origin: top left;
+}
+@keyframes transformScaleOut {
+  from {
+    transform: scaleX(1.085) scaleY(1.05);
+  }
+  to {
+    transform: scaleX(0px) scaleY(0px);
+  }
+}
+
+/* ABOUT US CONTENT ANIMATION */
+@keyframes slideFromBottomRight {
+  from {
+    transform: translate(-13%, 100%);
+
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+.animate-slide-from-bottom-right {
+  animation-name: slideFromBottomRight;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+/* ANIMATION FOR ABOUT CONTENT LEFT */
+@keyframes bgColorChange {
+  from {
+    background-position: right;
+  }
+  to {
+    background-position: left;
+  }
+}
+
+.hover-bg-animation {
+  background-position: right;
+  background-size: 210% 210%;
+  background-image: linear-gradient(to right, orange 50%, white 50%);
+  transition: background-position 0.4s ease-in;
+}
+
+.hover-bg-animation-hovered {
+  color: white;
+  background-size: 210% 210%;
+  background-image: linear-gradient(to left, white 50%, orange 50%);
+  transition: background-position 0.4s ease-in;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 1s ease-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.7s ease-out forwards;
+}
+
+.project-image {
+  transition: transform 0.3s ease-out;
+}
+
+@keyframes transformX {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.card {
+  width: 200px !important;
+  height: 200px;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px 1px rgba(158, 151, 151, 0.25);
+  border-radius: 15px;
+  margin: 12px;
+  padding: 12px;
+}
+.d-flex {
+  display: flex;
+  transform: translateX(calc(100vw));
+  overflow: visible;
+  animation: animateContainer 20s linear forwards infinite;
+  animation-play-state: paused;
+}
+@keyframes animateContainer {
+  from {
+    transform: translateX(calc(100vw));
+  }
+  to {
+    transform: translateX(calc(-100%));
+  }
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
